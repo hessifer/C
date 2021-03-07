@@ -8,6 +8,8 @@
  * or 'T' in the word at all, your program's output should be -1. You may 
  * assume that the word entered does not have more than 50 letters.
  *
+ * NOTE: code must use linear search.
+ *
  */
 
 #include <stdio.h>
