@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-void max_min(int[] , int *, int *);
+void max_min(const int* , int *, int *);
 
 int main(void)
 {
     int numbers[10] = {0};
+    int *p = numbers;
     int max_num = 0;
     int min_num = 0;
 
@@ -14,13 +15,14 @@ int main(void)
         scanf("%d", &numbers[i]);
     }
     
-    max_min(numbers, &max_num, &min_num);
+    max_min(p, &max_num, &min_num);
     printf("MAX Number: %d\nMin Number: %d\n", max_num, min_num);
 
     return 0;
 }
 
-void max_min(int arr[] , int *max, int *min) 
+// pass readonly reference to arr
+void max_min(const int *arr , int *max, int *min) 
 {
     *max = *min = arr[0];
 
